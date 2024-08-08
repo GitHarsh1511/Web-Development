@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Practical_4_2</title>
+    <style>
+        * { 
+    margin: 0; 
+    padding: 0; 
+    } 
+    body { 
+    background: linear-gradient(45deg, #49d49d 10%, #a2c7e5 90%); 
+    animation: body 4s; 
+    transition: 4s; 
+    } 
+    .flex { 
+    display: flex; 
+    } 
+    .center { 
+    text-align: center; 
+    } 
+    .shadow-box, 
+    .transform-box { 
+    display: flex; 
+    /* flex-direction: column; */ 
+    justify-content: center; 
+    } 
+    .shadow, 
+    .transformation { 
+    border: 1px solid #000; 
+    flex-direction: column; 
+    } 
+    .boxes { 
+    margin: 2em; 
+    height: 150px; 
+    width: 150px; 
+    border: 1px solid #000; 
+    } 
+    .box1 { 
+    background-color: #8cdcfc; 
+    box-shadow: -10px -10px 10px 2px black; 
+    } 
+    .box2 { 
+    background-color: #9affdd;
+    box-shadow: -10px 10px 10px 2px black inset; 
+} 
+.box3 { 
+background-color: red; 
+box-shadow: 10px -10px 10px 2px black; 
+} 
+.box4 { 
+background-color: #ff91da; 
+box-shadow: 10px 10px 10px 2px black; 
+} 
+.tb1, 
+.tb2, 
+.tb3, 
+.tb4 { 
+transition: 4s; 
+} 
+.tb1:hover { 
+transform: rotate(360deg); 
+} 
+.tb4:hover { 
+transform: rotate(-360deg); 
+} 
+@keyframes tb3 { 
+0% { 
+background-color: #00b7ff; 
+top: 0%; 
+left: 0%; 
+} 
+25% { 
+background-color: #a6ff00; 
+transform: rotate(90deg); 
+top: 0%; 
+left: 100%; 
+} 
+50% { 
+background-color: #ff00aa; 
+transform: rotate(180deg); 
+top: 100%; 
+left: 100%; 
+} 
+75% { 
+    background-color: #ffa600; 
+    transform: rotate(240deg); 
+    top: 100%; 
+    left: 0%; 
+    } 
+    100% { 
+    background-color: #00b7ff; 
+    top: 0%; 
+    left: 0%; 
+    transform: rotate(360deg); 
+    } 
+    } 
+    @keyframes tb2 { 
+    0% { 
+    background-color: #00b7ff; 
+    } 
+    25% { 
+    background-color: #a6ff00; 
+    transform: scale(50%); 
+    } 
+    50% { 
+    background-color: #ff00aa; 
+    transform: rotateY(180deg); 
+    } 
+    75% { 
+    background-color: #ffa600; 
+    transform: rotate(240deg); 
+    } 
+    100% { 
+    background-color: #00ffaa; 
+    transform: scale(100%); 
+    } 
+    } 
+    @keyframes body { 
+    0% { 
+    background: linear-gradient(45deg, #49d49d 10%, #a2c7e5 90%); 
+    } 
+    25% { 
+    background: linear-gradient(50deg, #a149d4 10%, #008cff 90%); 
+    } 
+    50% { 
+        background: linear-gradient(75deg, #fbff2a 10%, #ff7272 90%); 
+    } 
+    75% { 
+    background: linear-gradient(60deg, #49549d 10%, #000000 90%); 
+    } 
+    100% { 
+    background: linear-gradient(45deg, #49d49d 10%, #a2c7e5 90%); 
+    } 
+    }    
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="shadow flex">
+            <h1 class="shadow-title center">Shadow</h1>
+            <div class="shadow-box">
+                <div class="box1 boxes"></div>
+                <div class="box2 boxes"></div>
+                <div class="box3 boxes"></div>
+                <div class="box4 boxes"></div>
+            </div>
+        </div>
+        <div class="transformation flex">
+            <h1 class="transform-title center">Transformation & Animation</h1>
+            <div class="transform-box">
+                <div class="box1 boxes tb1 center" style="box-shadow: none; animation: tb1 4s;">
+                    <h3>Rotate +360</h3>
+                </div>
+                <div class="box2 boxes tb2 center" style="box-shadow: none; animation-name: tb2; animation-duration: 4s; animation-iteration-count: infinite;">
+                    <h3>Animation</h3>
+                </div>
+                <div class="box3 boxes tb3 center" style="box-shadow: none; animation-name: tb3; animation-duration: 4s; animation-iteration-count: infinite;">
+                    <h3>Rotate Infinite</h3>
+                </div>
+                <div class="box4 boxes tb4 center" style="box-shadow: none;">
+                    <h3>Rotate -360</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

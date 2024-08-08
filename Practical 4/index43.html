@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Z-Index</title>
+    <style>
+        div {
+  border: 1px solid black;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  padding: 50px;
+  font-size: 45px;
+  /* transition: 1s; */
+}
+.a11:hover {
+  transform: rotate(180deg);
+}
+.a21 {
+  background-image: repeating-linear-gradient(#c58940, #faeab1, #e5ba73);
+  position: relative;
+  top: 180px;
+  left: 100px;
+}
+.a21:hover {
+  transform: rotate(180deg);
+}
+.ab:hover {
+  height: 300px;
+  width: 300px;
+  transition-delay: 1s;
+  transform: rotate(180deg);
+}
+.b13 {
+  transition: 5s;
+  position: absolute;
+  top: 250px;
+  left: 125px;
+  background-image: repeating-radial-gradient(
+    #0d1282,
+    #eeeded,
+    #f0de36,
+    #d71313
+  );
+}
+.b13:hover {
+  rotate: 250deg;
+  height: 150px;
+  width: 50px;
+  box-shadow: 10px 10px 10px 5px;
+}
+.b22 {
+  transition: 5s;
+  top: 50px;
+  left: 125px;
+  background-image: repeating-radial-gradient(
+    #e6e2c3,
+    #88a47c,
+    #227c70,
+    #1c315e
+  );
+  position: relative;
+}
+.b22:hover {
+  height: 150px;
+  width: 150px;
+  transition-delay: 1s;
+  transform: rotate(110deg);
+}
+.a23 {
+  transition: 5s;
+  position: relative;
+  top: 50px;
+  right: 250px;
+  background-image: repeating-linear-gradient(
+    #fba1b7,
+    #ffd1da,
+    #fff0f5,
+    #ffdbaa
+  );
+}
+.a23:hover {
+  rotate: 250deg;
+  height: 150px;
+  width: 50px;
+  box-shadow: 10px 10px 10px 5px;
+}
+#st {
+  background-color: #795555;
+  margin-top: 10px;
+  padding-left: 100px;
+  height: 400px;
+  width: 35%;
+  display: flex;
+}
+.p12:hover {
+  transform: skew(20deg);
+}
+.p12 {
+  border: 2px solid outset black;
+  text-align: center;
+  top: 120px;
+  right: 100px;
+  border-radius: 10px;
+  border: "outset";
+  text-decoration: auto;
+  background-image: repeating-linear-gradient(
+    #83764f,
+    #a2a378,
+    #a0d8b3,
+    #e5f9db
+  );
+  font-size: 45px;
+  position: relative;
+  :hover {
+    text-shadow: 5px 5px 2px black;
+  }
+  transition: 1.5s;
+}
+#st {
+  background-color: hsl(170, 100%, 80%);
+  margin-top: 10px;
+  padding-left: 100px;
+  text-align: center;
+  height: 400px;
+  width: 35%;
+  display: flex;
+}
+.p11 {
+  border: 2px solid outset black;
+  text-align: center;
+  padding: 50px;
+  border-radius: 10px;
+  border: "outset";
+  text-decoration: auto;
+  background-image: linear-gradient(#97feed, #35a29f, #0b666a, #071952);
+  font-size: 45px;
+  position: absolute;
+  top: 225px;
+  left: 250px;
+  :hover {
+    text-shadow: 5px 5px 2px black;
+  }
+  transition: 1.5s;
+}
+.p11:hover {
+  transform: skew(20deg);
+}
+.maindiv {
+  height: 500px;
+  width: 100%;
+  display: inline-flex;
+  background-color: yellow;
+}
+
+    </style>
+</head>
+
+<body>
+    <h4 style="position: absolute; top:30px; left: 25%; z-index: 1;font-size: 20px; ">Position :
+        Absolute</h4>
+    <h4 style="position: absolute; top:30px; left: 71%; z-index: 1;font-size: 20px;">Position :
+        Relative</h4>
+    <div class="maindiv" style="position: relative;">
+        <div id="st">
+            <div class="a11" style="background-color:orange;">
+                <section>1</section>
+            </div>
+            <div class="ab" style="background-color:rgb(118, 39, 8);">
+                <section>2</section>
+            </div>
+            <div class="b13" style="background-color:rgb(27, 207, 168);">
+                <section>3</section>
+            </div>
+            <div class="p11">
+                <section>4</section>
+            </div>
+        </div>
+        <div id="st">
+            <div class="a21">
+                <section>1</section>
+            </div>
+            <div class="b22">
+                <section>2</section>
+            </div>
+            <div class="a23">
+                <section>3</section>
+            </div>
+            <div class="p12">
+                <section>4</section>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
