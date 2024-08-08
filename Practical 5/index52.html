@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+
+    <script>
+        function getInputText() {
+            return document.getElementById('indata').innerText;
+        }
+
+        function setOutputText(output) {
+            document.getElementById('outdata').innerText = output;
+        }
+
+        function getByIndex() {
+            const input = getInputText();
+            const index = prompt('Enter index:');
+            if (index >= 0 && index < input.length) {
+                setOutputText(input[index]);
+            } else {
+                setOutputText('Invalid index');
+            }
+        }
+
+        function getStrLen() {
+            const input = getInputText();
+            setOutputText(input.length);
+        }
+
+        function endsWith() {
+            const input = getInputText();
+            const str = prompt('Enter the string to check if input ends with it:');
+            setOutputText(input.endsWith(str));
+        }
+
+        function startsWith() {
+            const input = getInputText();
+            const str = prompt('Enter the string to check if input starts with it:');
+            setOutputText(input.startsWith(str));
+        }
+
+        function includes() {
+            const input = getInputText();
+            const str = prompt('Enter the string to check if input includes it:');
+            setOutputText(input.includes(str));
+        }
+
+        function getLastIndex() {
+            const input = getInputText();
+            const char = prompt('Enter the character to find its last index:');
+            setOutputText(input.lastIndexOf(char));
+        }
+
+        function getMatches() {
+            const input = getInputText();
+            const regex = prompt('Enter the regular expression:');
+            const matches = input.match(new RegExp(regex, 'g'));
+            setOutputText(matches ? matches.join(', ') : 'No matches found');
+        }
+
+        function toLower() {
+            const input = getInputText();
+            setOutputText(input.toLowerCase());
+        }
+
+        function toUpper() {
+            const input = getInputText();
+            setOutputText(input.toUpperCase());
+        }
+
+        function compare() {
+            const input = getInputText();
+            const str = prompt('Enter the string to compare with:');
+            const result = `== : ${input == str}, === : ${input === str}`;
+            setOutputText(result);
+        }
+
+        function getIndex() {
+            const input = getInputText();
+            const index = prompt('Enter the index to get the character:');
+            if (index >= 0 && index < input.length) {
+                setOutputText(input.charAt(index));
+            } else {
+                setOutputText('Invalid index');
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            gap: 20px;
+            margin: 20px;
+            border: 1px solid #000;
+            border-radius: 25px;
+            width: fit-content;
+            padding: 50px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            width: 180px;
+            height: 30px;
+            padding: 0 20px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .data {
+            border: 1px solid #000;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>String Method With Example</h1>
+    <div class="main">
+        <label id="indata" class="data" contenteditable="">Hello World</label>
+        <div class="container">
+            <button class="btn" onclick="getByIndex()">Get by Index</button>
+            <button onclick="getStrLen()">String Length</button>
+            <button onclick="endsWith()">String Ends With</button>
+            <button onclick="startsWith()">String Starts With</button>
+            <button onclick="includes()">Check Includes</button>
+            <button onclick="getLastIndex()">Get Last Index Of</button>
+            <button onclick="getMatches()">Using Regex</button>
+            <button onclick="toLower()">Convert to Lower</button>
+            <button onclick="toUpper()">Convert to Upper</button>
+            <button onclick="compare()">Compare using == && ===</button>
+            <button onclick="getIndex()">Get Character at Index</button>
+        </div>
+        <div class="info">
+            <label id="outdata" class="data">Output</label>
+        </div>
+    </div>
+</body>
+
+</html>
