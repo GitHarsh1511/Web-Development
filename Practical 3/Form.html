@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <style>
+        /* Global Styles */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+        }
+
+        h1 {
+            font-size: 345%;
+            text-align: center;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            text-shadow: 2px 2px black;
+            background-color: lightskyblue;
+            background-position: center;
+            /* border-radius: 1px; */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        h3 {
+            margin-top: 10px;
+        }
+
+        h5 {
+            font-size: 125%;
+            text-align: center;
+            color: red;
+            font-weight: bold;
+            text-shadow: 1px 1px black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea,
+        select {
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #337ab7;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 12px;
+            margin-left: 12px;
+
+        }
+
+        textarea {
+            height: 100px;
+            padding: 10px;
+            resize: vertical;
+        }
+
+        select {
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="color"] {
+            width: 75px;
+            height: 40px;
+            padding: 1px;
+            margin-bottom: 1px;
+            border: 1px solid #ccc;
+            border-radius: 1px;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #337ab7;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #23527c;
+        }
+
+        /* Form Container */
+
+        form {
+            max-width: 800px;
+            width: 50%;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: whitesmoke;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        /* Section Headers */
+
+        label[for="Gender"],
+        label[for="Address"],
+        label[for="Hobbies"],
+        label[for="Department"],
+        label[for="Color"] {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #337ab7;
+        }
+
+        /* Radio Buttons and Checkboxes */
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        label[for="101"],
+        label[for="102"],
+        label[for="Play"],
+        label[for="Dance"],
+        label[for="Reading"] {
+            margin-right: 20px;
+        }
+
+        /* Color Picker */
+
+        input[type="color"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* File Upload */
+
+        input[type="file"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Submit and Reset Buttons */
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 48%;
+            height: 40px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: lightskyblue;
+            color: black;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #23527c;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 style="text-align: center">Registration Form </h1>
+    <h5>Fill out the form carefully for Registration</h5>
+    <form action="/action.php">
+        <label>Enrollment No. : </label>
+        <input type="text">
+        <br>
+        <label>First Name : </label>
+        <input type="text">
+        <br />
+        <label>Middle Name : </label>
+        <input type="text">
+        <br />
+        <label>Last Name : </label>
+        <input type="text">
+        <label>Mobile No. : </label>
+        <input type="text">
+        <label>Email : </label>
+        <input type="text">
+        <table class="table">
+            <tr>
+                <td><span>
+                        <h3> Date of Birth : </h3>
+                    </span></td>
+                <td>
+                    <input type="date" name="dob">
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+
+        <label style="font-size: large; font-weight: bold;">Gender : <input type="radio" value="Male" name="class" id="101">
+            Male
+            <input type="radio" value="Female" name="class" id="102">
+            Female</label>
+        <br>
+        <label style="font-size: large; font-weight: bold;">Academic Year : <input type="radio" value="1st" name="class"
+                id="101">
+            1<sup>st</sup>
+            <input type="radio" value="2nd" name="class" id="102">
+            2<sup>nd</sup>
+            <input type="radio" value="3rd" name="class" id="103">
+            3<sup>rd</sup>
+            <input type="radio" value="4th" name="class" id="104">
+            4<sup>th</sup></label>
+        <br />
+        <br />
+        <label style="font-size: large; font-weight: bold;"> Department : </label>
+        <select name="Department">
+            <option value="AIDS">AIDS</option>
+            <option value="CP">CP</option>
+            <option value="CSD">CSD</option>
+            <option value="IT">IT</option>
+            <option value="EC">EC</option>
+            <option value="ME">ME</option>
+        </select>
+        <label style="font-size: large; font-weight: bold;"> Address : </label>
+
+        <textarea for="address" placeholder="" rows=""></textarea>
+        <br />
+        <br />
+
+        <label style="font-size: large; font-weight: bold;"> Hobbies : <input type="checkbox" value="Play" name="hobbie" id="101">
+            Play <input type="checkbox" value="Play" name="hobbie" id="101">
+            Dance <input type="checkbox" value="Play" name="hobbie" id="101">
+            Reading</label>
+        <br />
+        <br />
+        <label style="font-size: large; font-weight: bold;"> Color : <input type="color"> </label>
+        <br />
+        <h3><label> Upload Resume : </label></h3>
+        <input type="file">
+        <br />
+        <br />
+        <br />
+        <div class="button-container">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+
+</body>
+
+</html>
