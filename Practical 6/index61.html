@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-6</title>
+    <script src="script61.js" defer></script>
+    <style>
+        th,
+        td {
+            padding: 10px;
+        }
+
+        tr > td:last-child {
+            text-align: center;
+            width: 11rem;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <th>Event</th>
+            <th>Button/Input Type</th>
+            <th>Output</th>
+        </tr>
+        <tr>
+            <td>onblur</td>
+            <td><input type="text" id="blur" placeholder="Blur" onblur="onblurHandler()"></td>
+            <td><label class="onblurmsg"></label></td>
+        </tr>
+        <tr>
+            <td>onchange</td>
+            <td>
+                <select name="option" id="select" onchange="onchangeHandler()">
+                    <option value="C">C</option>
+                    <option value="C++">C++</option>
+                    <option value="JAVA">JAVA</option>
+                    <option value="AJAVA">AJAVA</option>
+                </select>
+            </td>
+            <td><label class="change"></label></td>
+        </tr>
+        <tr>
+            <td>ondblclick</td>
+            <td><button id="dbclick" ondblclick="dbclickHandler()">Double Click Me</button></td>
+            <td><label class="dbclick"></label></td>
+        </tr>
+        <tr>
+            <td>onfocus</td>
+            <td><input type="text" id="focus" placeholder="Focus" onfocus="onfocusHandler()"></td>
+            <td><label class="onfocusmsg"></label></td>
+        </tr>
+        <tr>
+            <td>Key Event</td>
+            <td><input type="text" id="keyevent" placeholder="Press or Release a key"></td>
+            <td><label class="onkeyeventmsg"></label></td>
+        </tr>
+        <tr>
+            <td>Mouse Event</td>
+            <td>
+                <p style="border: 1px solid red; padding: 3px;" id="mouseEventP" onmousedown="mouseDown()"
+                    onmouseup="mouseUp()">Mouse Press and Release Event</p>
+                <input type="text" id="mouseEvent2" placeholder="Mouse Enter/Leave" onmouseenter="mouseEntered()"
+                    onmouseleave="mouseOut()">
+            </td>
+            <td><label class="onmouseeventmsg"></label></td>
+        </tr>
+    </table>
+    <div class="container">
+        <h3>Mouse X & Y Position</h3>
+        <div class="x">
+            X Position : <button class="btn" id="x">0</button>
+        </div>
+        <div class="y">
+            Y Position : <button class="btn" id="y">0</button>
+        </div>
+    </div>
+</body>
+
+</html>
