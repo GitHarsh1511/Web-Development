@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex | Form Validation</title>
+    <script src="script62.js" defer></script>
+    <link rel="stylesheet" href="style62.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Registration</div>
+        <form action="">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" id="name" name="fullName" placeholder="Enter Your Name">
+                </div>
+                <div class="input-box">
+                    <span class="details">User Name</span>
+                    <input type="text" id="userName" name="userName" placeholder="Enter Your User Name">
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="text" id="email" name="email" placeholder="Enter Your email">
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="text" id="mobile" name="mobileNumber" placeholder="Enter Your Phone">
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="text" id="password" name="password" placeholder="Enter Your password">
+                </div>
+                <div class="input-box">
+                    <span class="details">Confirm Password</span>
+                    <input type="text" id="cnfPassword" name="confirmPassword" placeholder="Confirm Your Password">
+                </div>
+            </div>
+            <div class="gender-details">
+                <span class="gen-title">Gender</span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="one"><input type="radio" name="gender" value="Male" id="gender"></span>
+                        <span class="gender">Male</span>
+                    </label>
+                    <label for="dot-2">
+                        <input type="radio" name="gender" value="Female" id="gender">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                    </label>
+                    <label for="dot-3">
+                        <input type="radio" name="gender" value="Not Described" id="gender">
+                        <span class="dot three"></span>
+                        <span class="gender">Prefer Not to Say</span>
+                    </label>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" id="submit" value="Register">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
