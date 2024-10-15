@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP | File Upload</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .flex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hw {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .container {
+            background: #e2e2e2;
+            height: 200px;
+            width: 25rem;
+            padding: 10px;
+        }
+
+        .btn {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body class="flex hw">
+    <div class="container flex">
+        <form action="upload71.php" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" id="image">
+            <input type="submit" name="submit" value="Upload">
+        </form>
+    </div>
+</body>
+
+</html>

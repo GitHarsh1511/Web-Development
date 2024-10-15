@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Authentication | PHP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .form {
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+        .btn {
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .input-box {
+            padding: 10px;
+            margin: 10px;
+            gap: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container flex">
+        <h3>LOGIN</h3>
+        <div class="form">
+            <form action="auth73.php" class="flex" method="post">
+                <div class="input-box">
+                    label for="username">Username : </label>
+                    <input type="text" id="username" name="username">
+                </div>
+                <div class="input-box">
+                    <label for="password">Password : </label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <button class="btn">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
